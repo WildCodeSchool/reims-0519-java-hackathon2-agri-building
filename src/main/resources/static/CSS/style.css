@@ -2,3 +2,35 @@
     font-family: "Jungle Roar";
     src: url("../CSS/Jungle Roar Regular.ttf");
 }
+
+.windows img{
+	max-width: 150px;
+	max-height: 150px;
+}
+
+.door img{
+	max-height: 150px;
+	max-width: 400px; 
+	padding-top: 40px;
+}
+
+h1 {
+	margin-top: 40px;
+	padding-bottom: 50px;
+}
+
+.windows{
+	padding-bottom: 30px;
+}
+
+.immeuble{
+	background-image: url("brique2.png");
+	margin-left: 130px;
+	padding-top: 40px;
+	margin-right: 130px;
+}
+
+.toit img{
+	max-width: 100vh;
+	max-height: 250px;
+}
