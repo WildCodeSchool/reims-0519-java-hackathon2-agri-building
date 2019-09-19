@@ -31,4 +31,5 @@ build/
 .vscode/
 
 *.class
+.DS_Store
 application.properties
