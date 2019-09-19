@@ -31,3 +31,4 @@ build/
 .vscode/
 
 *.class
+.DS_Store
