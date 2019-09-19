@@ -32,3 +32,4 @@ build/
 
 *.class
 application.properties
+.DS_Store
