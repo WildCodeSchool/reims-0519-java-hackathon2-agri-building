@@ -2685,3 +2685,70 @@ h1 {
     -webkit-box-shadow: inset 0px 0px 5px 1px #3F6B91;
     box-shadow: inset 0px 0px 5px 1px #3F6B91;
 }
+
+
+
+
+/* -------- SECTION MODALES -------- */
+
+/* FONT SIZE H2 MODAL */
+@media screen and (max-width: 599px){
+    #modal h2{
+        font-size:6vw;
+    }
+}
+
+@media screen and (min-width: 600px){
+    #modal h2{
+        font-size:4.5vw;
+    }
+}
+
+@media screen and (min-width: 768px){
+    #modal h2{
+        font-size:3.5vw;
+    }
+}
+
+@media screen and (min-width: 992px){
+    #modal h2{
+        font-size:3vw;
+    }
+}
+
+@media screen and (min-width: 1200px){
+    #modal h2{
+        font-size:2.5vw;
+    }
+}
+
+/* WIDTH MODA */
+@media screen and (min-width: 992px){
+    #modal  .modal-dialog {
+        max-width: 60%;
+    }
+}
+
+@media screen and (min-width: 1200px){
+    #modal  .modal-dialog {
+        max-width: 50%;
+    }
+}
+
+#modal .modal-header{
+    align-items: center;
+    position: relative;
+}
+
+#modal .modal-title{
+    text-align: center;
+    margin-left:auto;
+    margin-right: auto;
+    padding-left:15px;
+}
+
+#modal .modal-icons{
+    position: absolute;
+    right:20px;
+    bottom: 0;
+}
