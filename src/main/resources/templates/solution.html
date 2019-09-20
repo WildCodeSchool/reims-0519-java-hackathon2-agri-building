@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <title></title>
+        <meta name="description" content="">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link rel="stylesheet" href="">
+    </head>
+    <body>
+        <!-- Affichage standard des données -->
+        <table>
+            <thead>
+                <th>Entreprise</th>
+                <th>Secteur</th>
+                <th>Typo</th>
+                <th>Mission</th>
+                <th>Site internet</th>
+                <th>Nom</th>
+                <th>Rôle</th>
+                <th>Compétence 1</th>
+                <th>Compétence 2</th>
+            </thead>
+            <tr th:each="adherent : ${adherents}">
+                <td th:text="${adherent.company}"></td>
+                <td th:text="${adherent.sector}"></td>
+                <td th:text="${adherent.typo}"></td>
+                <td th:text="${adherent.mission}"></td>
+                <td>
+                    <a th:href="@{${adherent.website}}" th:text="site"></a>
+                </td>
+                <td th:text="${adherent.fullname}"></td>
+                <td th:text="${adherent.role}"></td>
+                <td th:text="${adherent.firstExpertise}"></td>
+                <td th:text="${adherent.secondExpertise}"></td>
+            </tr>
+        </table>
+        <!-- Affichage standard des données -->
+    </body>
+</html>
