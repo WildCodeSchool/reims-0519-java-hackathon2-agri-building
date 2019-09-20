@@ -8,9 +8,9 @@
         <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
         <link rel="stylesheet" th:href="@{/CSS/style.css}">
     </head>
-    <body class="container-fluid">
+    <body class="container-fluid custom-body-background">
         <!-- Affichage standard des données -->
-        <table>
+        <!-- <table>
             <thead>
                 <th>Entreprise</th>
                 <th>Secteur</th>
@@ -35,43 +35,34 @@
                 <td th:text="${adherent.firstExpertise}"></td>
                 <td th:text="${adherent.secondExpertise}"></td>
             </tr>
-        </table>
+        </table> -->
         <!-- Affichage standard des données -->
 
-        <!-- <div th:each="adherent : ${adherents}" class="modal fade" th:id="${'ModalAdherent' + adherent.id}" tabindex="-1" role="dialog" aria-labelledby="ModalCenterTitle" aria-hidden="true">
+        <div th:each="adherent : ${adherents}" class="modal fade" th:id="${'ModalAdherent' + adherent.id}" tabindex="-1" role="dialog" aria-labelledby="ModalCenterTitle" aria-hidden="true">
             <div class="modal-dialog modal-dialog-centered modal-lg" role="document">
               <div class="modal-content">
+                
+                
+                
                 <div class="modal-header">
-                  <img class="photo-profil" src="IMG/avatar1.png" width="150" alt="Photo de profil">
                   <h2 class="modal-title" th:text="${adherent.fullname}"></h2>
                 </div>
                 <div class="modal-body">
-                  <h3>Qui suis-je ?</h3>
-                  <p>Après une licence professionnelle en Web Design et une expérience de 3 ans en tant qu’infographiste et responsable e-commerce, j’ai rejoint la Wild Code School afin de me reconvertir dans le développement web afin d’obtenir un profil Front-end & Back-end. Motivé et passionné, je suis prêt à réussir cette nouvelle étape dans ma vie professionnelle.</p>
-                  <p>Je suis prêt à me former sur un autre langage ou techno.</p>
+                  <h3>Mon rôle</h3>
+                  <p th:text="${adherent.role}"></p>
     
-                  <h3>Langages informatiques :</h3>
-                  <p>JAVA - JEE - SPRING - ANDROID</p>
-                  <p>HTML5 - CSS3</p>
-      
-                  <h3>Compétences professionnelles :</h3>
-                  <p>GIT - GITHUB</p>
-                  <p>MÉTHODE AGILE (Scrum)</p>
-                  <p>PHOTOSHOP - ILLUSTRATOR - INDESIGN</p>
-                  <p>BOOTSTRAP - WORDPRESS</p>
-                  <p>MySQL</p>
-                  <p></p>
+                  <h3>Mission de l'entreprise :</h3>
+                  <p th:text="${adherent.mission}"></p>
     
-                  <h3>Mobilité : </h3>
-                  <p>Marne, Paris, Charleville-Mézières</p>
-                  <ion-icon name="mail"></ion-icon> bouakil.clement.pro@gmail.com
+                  <h3>Site internet : </h3>
+                  <p><a th:href="@{${adherent.website}}" th:text="${adherent.website}"></a></p>
                 </div>
                 <div class="modal-footer">
                   <button type="button" class="btn btn-outline-dark" data-dismiss="modal">Fermer</button>
                 </div>
               </div>
             </div>
-          </div> -->
+          </div>
 
         <!-- Affichage des cards -->
         <section id="cards">
@@ -85,6 +76,7 @@
                         <ul class="list-group list-group-flush">
                             <li class="list-group-item" th:text="${adherent.sector}"><ion-icon name="pin"></ion-icon></li>
                             <li class="list-group-item" th:text="${adherent.typo}"><ion-icon name="pin"></ion-icon></li>
+                            <li class="list-group-item" th:text="${adherent.firstExpertise + ' / ' + adherent.secondExpertise}"><ion-icon name="pin"></ion-icon></li>
                         </ul>
                     </div>
                 </div>
